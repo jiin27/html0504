@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>display개념</title>
+<style>
+	#b1{
+		width:100px;
+		height:100px;
+		background:red;
+		margin-bottom: 20px;
+	}
+
+	#b2{
+		width:100px;
+		height:100px;
+		background:blue;
+		margin-bottom: 100px;
+	}
+
+/*스팬에 대해 배경색과 너비, 높이를 지정해보자. and는 ,*/
+	#s1, #s2{
+		background:#99ccff;
+		width:50px; /*inline의 경우는 너비 부여불가*/
+		height:50px; /*inline의 경우는 높이 부여불가*/
+	}
+
+/*
+	이미지는 공존 가능. 너비와 높이도 부여 가능하다.
+	display: inline-block (두 개의 특징 모두 가짐)
+*/
+	img{
+		width:50px;
+		height:50px;
+	}
+
+</style>
+</head>
+<body>
+<!--
+	모드느 태그는 Box이자, display 속성을 가진다.
+	block 형: 다른 태그 요소를 옆에 허용하지 않는 속성. 너비가 화면 끝까지 도달하므로.
+				주의) width를 줄여도, 시각적으로만 줄어들 뿐 여전히 같은 수평선상에 그 어떤 태그도 혀용하지 않는다.
+	중요한 특징: block형이어야 width, height 적용됨
+
+	inline 형: 옆에 다른 태그 요소를 허용한다. 너비가 화면 끝까지 도달하는 것이 아니라,
+				자신이 보유한 컨텐츠 만큼만 확보되므로
+				주의) width, height 적용되지 않는다.
+	
+	어떤 태그가 어떤 display 속성을 갖는지는 굳이 암기하지 않아도 된다. 작성해보면 알기 때문.
+-->
+	<div id="b1">Box1</div>
+	<div id="b2">Box2</div>
+
+	<img src="../images/bg.jpg" width="100px">
+	<img src="../images/bg.jpg" width="100px">
+
+	<span id="s1">난스팬1</span>
+	<span id="s2">난스팬2</span>
+
+	<p>난첫번째문단</p>
+	<p>난두번째문단</p>
+
+	<ul>
+		<li>키위</li>
+		<li>딸기</li>
+	</ul>
+
+	<ul>
+		<li>복숭아</li>
+		<li>수박</li>
+	</ul>
+
+	<a href="#">네이버</a>
+	<a href="#">다음</a>
+	
+	<h1>헤드1</h1>
+	<h1>헤드2</h1>
+	
+</body>
+</html>
